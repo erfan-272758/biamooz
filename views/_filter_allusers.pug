@@ -1,0 +1,101 @@
+section.filter
+  form#filter-allusers--form.form
+    .filter-body
+      .filter-groups.filter-property
+        .filter-group
+          .filter-title
+            input(type='text' name='lastName' placeholder='نام خانوادگی')
+        .filter-group
+          .filter-title
+            input(type='text' name='username' placeholder='کد ملی')
+        .filter-group
+          .filter-title
+            input(type='text' name='personalPhone' placeholder='تلفن شخصی')
+        .filter-group
+          .filter-title
+            input(type='email' name='email' placeholder='ایمیل')
+        .filter-group
+          .filter-title
+            input(type='text' name='familyPhone' placeholder='تلفن پدر')
+        .filter-group
+          .filter-title
+            input(type='text' name='schoolName' placeholder='نام مدرسه')
+        .filter-group
+          .filter-title
+            textarea(name='address' cols='30' rows='10' placeholder='آدرس')
+        .filter-group
+          .filter-title
+            input(type='number' name='box' placeholder='ذخیره صندوق')
+          .filter-detail
+            .filter-mini-group
+              input(type='radio' name='box-eq' value='gt')
+              label(for='box-eq') بیشتر
+            .filter-mini-group
+              input(type='radio' name='box-eq' value='eq' checked='')
+              label(for='box-eq') مساوی
+            .filter-mini-group
+              input(type='radio' name='box-eq' value='lt')
+              label(for='box-eq') کمتر
+        .filter-group
+          .filter-title
+            label(for='role') موقعیت کاربر
+          .filter-detail
+            .filter-mini-group
+              input(type='checkbox' name='role' value='user')
+              label(for='role') معمولی
+            .filter-mini-group
+              input(type='checkbox' name='role' value='user-admin')
+              label(for='role') نیمه مدیریتی
+        .filter-group
+          .filter-title
+            label(for='active') وضعیت کاربر
+          .filter-detail
+            .filter-mini-group
+              input(type='checkbox' name='active' value='true')
+              label(for='active') فعال
+            .filter-mini-group
+              input(type='checkbox' name='active' value='false')
+              label(for='active') غیرفعال
+      .filter-groups.filter-sort
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='firstName')
+            label(for='sort') نام
+          .filter-detail
+            select(name='sort')
+              option(value='firstName_1') صعودی
+              option(value='firstName_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='lastName')
+            label(for='sort') نام خانوادگی
+          .filter-detail
+            select(name='sort')
+              option(value='lastName_1') صعودی
+              option(value='lastName_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='box')
+            label(for='sort') ذخیره صندوق
+          .filter-detail
+            select(name='sort')
+              option(value='box_1') صعودی
+              option(value='box_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='role')
+            label(for='sort') موقعیت کاربر
+          .filter-detail
+            select(name='sort')
+              option(value='role_1') صعودی
+              option(value='role_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='active')
+            label(for='sort') وضعیت کاربر
+          .filter-detail
+            select(name='sort')
+              option(value='active_1') صعودی
+              option(value='active_-1') نزولی
+    button اعمال
+  button.cancel--filter#allusers_filter--cancel انصراف

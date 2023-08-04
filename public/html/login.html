@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <script defer src="./script.js"></script>
+    <title>بیاموز</title>
+    <link rel="icon shortcout" href="./img/icon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container">
+        <a href="./" class="title">
+          <img src="./img/icon.png" alt="بیاموز" class="title--icon" />
+          <h1 class="title--text">بیاموز</h1>
+        </a>
+        <div class="log_sign">
+          <a href="./login.html" class="log_sign--login">ورود</a>
+          <a href="./signup.html" class="log_sign--signup">ثبت نام</a>
+        </div>
+        <div class="logout">
+          <a href="/my">
+            <img src="./img/users/user.jpg" alt="عکس" />
+            <h1>محمد عرفان</h1>
+          </a>
+          <a href="#" class="logout--logout">خروج</a>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <section id="login--section" class="mini-form-section">
+        <form class="form validation-form" id="login--form">
+          <input
+            type="text|email"
+            required
+            placeholder="ایمیل یا کد ملی خود را وارد کنید"
+            id="username"
+          />
+          <input
+            type="password"
+            required
+            placeholder="رمز خود را وارد کنید"
+            minlength="8"
+            id="password"
+          />
+          <a href="/forgotPassword" class="forget_password--a"
+            >رمز عبور را فراموش کرده ام</a
+          >
+          <button class="login--button">ورود</button>
+        </form>
+        <button class="signup--button">ثبت نام</button>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer_logo">
+        <img src="./img/icon.png" alt="لگو" />
+        <h6>گروه آموزشی بیاموز</h6>
+      </div>
+      <p class="footer_copyright">
+        تمام حقوق سایت متعلق به گروه آموزشی بیاموز می باشد &copy;
+      </p>
+    </footer>
+  </body>
+</html>

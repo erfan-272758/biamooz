@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <script defer src="./script.js"></script>
+    <title>مشاهده کاربر | بیاموز</title>
+    <link rel="icon shortcout" href="./img/icon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container">
+        <a href="./" class="title">
+          <img src="./img/icon.png" alt="بیاموز" class="title--icon" />
+          <h1 class="title--text">بیاموز</h1>
+        </a>
+        <div class="log_sign">
+          <a href="./login.html" class="log_sign--login">ورود</a>
+          <a href="./signup.html" class="log_sign--signup">ثبت نام</a>
+        </div>
+        <div class="logout">
+          <a href="/my">
+            <img src="./img/users/user.jpg" alt="عکس" />
+            <h1>محمد عرفان</h1>
+          </a>
+          <a href="#" class="logout--logout">خروج</a>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <section class="visit--container">
+        <section class="visit--menu">
+          <button class="update-book--button cancel-book--button">
+            ویرایش
+          </button>
+          <button class="delete-book--button">حذف</button>
+        </section>
+        <section class="visit--body">
+          <section class="doc-visit">
+            <div class="doc-details">
+              <div class="doc-images">
+                <img src="./img/users/user.jpg" alt="عکس" id="user-photo" />
+              </div>
+              <div class="details">
+                <h3 class="title">نام و نام خانوادگی :</h3>
+                <h3 class="detail">محمد عرفان مهوش محمدی</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">نام پدر :</h3>
+                <h3 class="detail">منصور</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">کد ملی :</h3>
+                <h3 class="detail">1130563588</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">تلفن شخصی :</h3>
+                <h3 class="detail">09390958379</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">ایمیل :</h3>
+                <h3 class="detail">erfan272758@gmail.com</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">تلفن پدر :</h3>
+                <h3 class="detail">09132174304</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">نام مدرسه :</h3>
+                <h3 class="detail">اژ ه ای</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">آدرس :</h3>
+                <p class="detail">خ شریعتی</p>
+              </div>
+              <div>
+                <div class="details" id="user-visit-box">
+                  <h3 class="title">موجودی :</h3>
+                  <h3 class="detail">2000</h3>
+                </div>
+                <div id="user-update-box" class="none">
+                  <form class="form user-update-box--form">
+                    <input
+                      type="number"
+                      name="box"
+                      id="box"
+                      required
+                      placeholder="موجودی"
+                    />
+                    <button>ذخیره</button>
+                  </form>
+                </div>
+              </div>
+              <div>
+                <div class="details" id="user-visit-active">
+                  <h3 class="title">وضعیت کاربر :</h3>
+                  <h3 class="detail">کاربر معمولی</h3>
+                  <h3 class="detail">فعال</h3>
+                </div>
+                <div id="user-update-active" class="none">
+                  <form class="form user-update-active--form">
+                    <div class="form-group">
+                      <label for="role">نقش</label>
+                      <select name="role" id="role" required>
+                        <option value="user">معمولی</option>
+                        <option value="user-admin">نیمه مدیریتی</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="active">وضعیت</label>
+                      <select name="active" id="active" required>
+                        <option value="true">فعال</option>
+                        <option value="false">غیرفعال</option>
+                      </select>
+                    </div>
+                    <button>ذخیره</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div id="user-visit-rentings-book">
+              <div class="book-show">
+                <img src="./img/books/book.png" alt="عکس" />
+                <div>
+                  <h3>نردبام</h3>
+                  <div class="book-show-group">
+                    <h4>زمان دریافت :</h4>
+                    <h4>2 تیر 1400</h4>
+                  </div>
+                  <div class="book-show-group">
+                    <h4>زمان تحویل :</h4>
+                    <h4>2 شهریور 1400</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="book-show">
+                <img src="./img/books/book.png" alt="عکس" />
+                <div>
+                  <h3>نردبام</h3>
+                  <div class="book-show-group">
+                    <h4>زمان دریافت :</h4>
+                    <h4>2 تیر 1400</h4>
+                  </div>
+                  <div class="book-show-group">
+                    <h4>زمان تحویل :</h4>
+                    <h4>2 شهریور 1400</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="book-show">
+                <img src="./img/books/book.png" alt="عکس" />
+                <div>
+                  <h3>نردبام</h3>
+                  <div class="book-show-group">
+                    <h4>زمان دریافت :</h4>
+                    <h4>2 تیر 1400</h4>
+                  </div>
+                  <div class="book-show-group">
+                    <h4>زمان تحویل :</h4>
+                    <h4>2 شهریور 1400</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="book-show">
+                <img src="./img/books/book.png" alt="عکس" />
+                <div>
+                  <h3>نردبام</h3>
+                  <div class="book-show-group">
+                    <h4>زمان دریافت :</h4>
+                    <h4>2 تیر 1400</h4>
+                  </div>
+                  <div class="book-show-group">
+                    <h4>زمان تحویل :</h4>
+                    <h4>2 شهریور 1400</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="book-show">
+                <img src="./img/books/book.png" alt="عکس" />
+                <div>
+                  <h3>نردبام</h3>
+                  <div class="book-show-group">
+                    <h4>زمان دریافت :</h4>
+                    <h4>2 تیر 1400</h4>
+                  </div>
+                  <div class="book-show-group">
+                    <h4>زمان تحویل :</h4>
+                    <h4>2 شهریور 1400</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="book-show">
+                <img src="./img/books/book.png" alt="عکس" />
+                <div>
+                  <h3>نردبام</h3>
+                  <div class="book-show-group">
+                    <h4>زمان دریافت :</h4>
+                    <h4>2 تیر 1400</h4>
+                  </div>
+                  <div class="book-show-group">
+                    <h4>زمان تحویل :</h4>
+                    <h4>2 شهریور 1400</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer_logo">
+        <img src="./img/icon.png" alt="لگو" />
+        <h6>گروه آموزشی بیاموز</h6>
+      </div>
+      <p class="footer_copyright">
+        تمام حقوق سایت متعلق به گروه آموزشی بیاموز می باشد &copy;
+      </p>
+    </footer>
+  </body>
+</html>

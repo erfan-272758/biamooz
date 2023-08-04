@@ -1,0 +1,24 @@
+mixin personalInfo()
+    //- personal info
+    section#b-personal-info
+        form.form.public--form
+            .form_photo_upload
+                img#person-photo.photo-profile(src=`/${user.photo}` alt='عکس پروفایل')
+                label.a-btn(for="photo") آپلود تصویر 
+                input#photo.gone(type='file' name='photo' accept='image/*')
+            input#firstName(type='text' minlength='2' required='' placeholder='نام' name='firstName' value=`${user.firstName}`)
+            input#lastName(type='text' minlength='2' required='' placeholder='نام خانوادگی' name='lastName' value=`${user.lastName}`)
+            input#username(type='text' minlength='10' maxlength='10' required='' placeholder='کد ملی' name='username' disabled value=`${user.username}`)
+            input#email(type='email' required='' placeholder='ایمیل' name='email' value=`${user.email}`)
+            input#personalPhone(type='text' required='' minlength='11' maxlength='11' placeholder='شماره تلفن شخصی' name='personalPhone' value=`${user.personalPhone}`)
+            input#parentName(type='text' minlength='2' required='' placeholder='نام پدر' name='parentName' value=`${user.parentName}`)
+            input#familyPhone(type='text' required='' minlength='11' maxlength='11' placeholder='شماره تلفن پدر' name='familyPhone' value=`${user.familyPhone}`)
+            input#schoolName(type='text' minlength='2' required='' placeholder='نام مدرسه' name='schoolName' value=`${user.schoolName}`)
+            textarea#address(name='address' cols='30' rows='10' placeholder='آدرس') #{user.address.replace(/\n/g,'\n|')}
+            button.public--save ذخیره
+        form.form.private--form
+            input#passwordCurrent(type='password' required='' placeholder='رمز عبور فعلی' minlength='8' name='passwordCurrent')
+            input#password(type='password' required='' placeholder='رمز عبور جدید' minlength='8' name='password')
+            input#passwordConfirm(type='password' required='' placeholder='تکرار رمز عبور' minlength='8' name='passwordConfirm')
+            button.private--save تغییر
+    //- end of personal info

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <script defer src="./script.js"></script>
+    <title>بیاموز</title>
+    <link rel="icon shortcout" href="./img/icon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container">
+        <a href="./" class="title">
+          <img src="./img/icon.png" alt="بیاموز" class="title--icon" />
+          <h1 class="title--text">بیاموز</h1>
+        </a>
+        <div class="log_sign">
+          <a href="./login" class="log_sign--login">ورود</a>
+          <a href="./signup" class="log_sign--signup">ثبت نام</a>
+        </div>
+        <div class="logout">
+          <a href="/my">
+            <img src="./img/users/user.jpg" alt="عکس" />
+            <h1>محمد عرفان</h1>
+          </a>
+          <a href="#" class="logout--logout">خروج</a>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <section class="signup--section">
+        <form class="form signup--form">
+          <input
+            type="text"
+            minlength="2"
+            required
+            placeholder="نام"
+            id="firstName"
+            name="firstName"
+          />
+          <input
+            type="text"
+            minlength="2"
+            required
+            placeholder="نام خانوادگی"
+            id="lastName"
+            name="lastName"
+          />
+          <input
+            type="text"
+            minlength="10"
+            maxlength="10"
+            required
+            placeholder="کد ملی"
+            id="username"
+            name="username"
+          />
+          <input
+            type="email"
+            required
+            placeholder="ایمیل"
+            id="email"
+            name="email"
+          />
+          <input
+            type="text"
+            required
+            minlength="11"
+            maxlength="11"
+            placeholder="شماره تلفن شخصی"
+            id="personalPhone"
+            name="personalPhone"
+          />
+          <input
+            type="password"
+            required
+            placeholder="رمز عبور"
+            minlength="8"
+            id="password"
+            name="password"
+          />
+          <input
+            type="password"
+            required
+            placeholder="تکرار رمز عبور"
+            minlength="8"
+            id="passwordConfirm"
+            name="passwordConfirm"
+          />
+          <input
+            type="text"
+            minlength="2"
+            required
+            placeholder="نام پدر"
+            id="parentName"
+            name="parentName"
+          />
+          <input
+            type="text"
+            required
+            minlength="11"
+            maxlength="11"
+            placeholder="شماره تلفن پدر"
+            id="familyPhone"
+            name="familyPhone"
+          />
+          <input
+            type="text"
+            minlength="2"
+            required
+            placeholder="نام مدرسه"
+            id="schoolName"
+            name="schoolName"
+          />
+          <textarea
+            name="address"
+            id="address"
+            cols="30"
+            rows="10"
+            placeholder="آدرس"
+          ></textarea>
+
+          <button class="signup--button">ثبت نام</button>
+        </form>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer_logo">
+        <img src="./img/icon.png" alt="لگو" />
+        <h6>گروه آموزشی بیاموز</h6>
+      </div>
+      <p class="footer_copyright">
+        تمام حقوق سایت متعلق به گروه آموزشی بیاموز می باشد &copy;
+      </p>
+    </footer>
+    <label for="rules">
+      <a href="">شرایط و ضوابط</a>
+      را خوانده و آن را قبول دارم.
+    </label>
+  </body>
+</html>

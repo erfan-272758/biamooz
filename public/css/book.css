@@ -1,0 +1,373 @@
+.form_image_upload {
+  display: flex;
+  flex-direction: row;
+  width: min-content;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+.form_image_upload label {
+  cursor: pointer;
+}
+.form_image_upload img {
+  width: 15rem;
+  height: 21rem;
+  object-fit: cover;
+  background-color: #eee;
+  margin: 0 3rem;
+  border-radius: 1rem;
+}
+
+.book_box {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-details {
+  perspective: 100rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-right: 25rem;
+}
+
+.img-box {
+  transform: rotateY(20deg);
+  transform-origin: left;
+  box-shadow: -0.5rem 0.8rem 0.6rem 0.1rem #777;
+  transition: all 0.7s 1s, margin 0s;
+  height: 35.8rem;
+  width: 26rem;
+  position: relative;
+  border-radius: 1rem;
+  margin: 2rem;
+  margin-left: 5rem;
+}
+
+.book_box .doc-details {
+  flex-grow: 1;
+  padding-left: 1rem;
+}
+
+.book_box .doc-details .detail {
+  white-space: break-spaces;
+}
+
+.book_box .doc-details .title {
+  white-space: nowrap !important;
+}
+
+.img-box:hover {
+  transform: rotateY(0deg);
+  transform-origin: left;
+  box-shadow: none;
+  transition: all 0.7s;
+}
+
+.img-back,
+.img-front {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #eee;
+  position: absolute;
+  border-radius: 1rem;
+  filter: brightness(90%);
+}
+
+.img-back {
+  filter: brightness(85%) blur(0.5px);
+  transition: filter 0.5s 0.5s;
+}
+
+.img-front {
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  transition: left 1s, filter 0.5s 0.5s, top 0.7s 1s;
+}
+
+.img-front.one-book {
+  top: 0;
+  left: 0;
+}
+
+.img-box:hover .img-back {
+  filter: brightness(110%);
+  transition: filter 0.5s 1.2s;
+}
+.img-box:hover .img-front {
+  top: 0;
+  left: 130%;
+  filter: brightness(110%);
+  transition: left 1s 0.7s, filter 0.5s 1.2s, top 0.7s;
+}
+
+.img-box:hover .img-front.one-book {
+  left: 0;
+  filter: brightness(110%);
+  transition: filter 0.5s 1.2s;
+}
+
+.fixed--menu .send-request {
+  position: static !important;
+}
+
+.send-request {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  align-items: center;
+  top: 2.5rem;
+  left: 2rem;
+}
+
+.send-request h3 {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+#book-renter::before {
+  content: 'کرایه کننده';
+  color: #aaa;
+  position: absolute;
+  font-size: 1.35rem;
+  font-weight: 600;
+  top: -4rem;
+  right: 0rem;
+  white-space: nowrap;
+}
+
+#book-renter {
+  margin: 5rem 4rem 0 0 !important;
+  overflow-x: visible !important;
+}
+#book-renter,
+#book-editors,
+#user-visit-rentings-book {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 2rem;
+  overflow-x: auto;
+  position: relative;
+}
+#user-visit-rentings-book .doc-show,
+#book-editors .doc-show {
+  margin-top: 3rem;
+}
+#book-editors::before {
+  content: 'ویرایش کننده';
+  color: #aaa;
+  position: absolute;
+  font-size: 1.35rem;
+  font-weight: 600;
+  top: 0;
+  right: 2rem;
+  white-space: nowrap;
+}
+
+#book-editors > div {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  margin: 0 -1.5rem 0 2rem;
+}
+
+#date--container > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.date-groups {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.date-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+}
+.date-group label,
+.date-group select,
+.date-group h3 {
+  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem;
+  white-space: nowrap;
+}
+
+.date-group select {
+  padding-left: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1rem dashed;
+  transition: border-bottom 0.3s;
+}
+.date-group select:focus {
+  border-bottom: 0.1rem dotted transparent;
+}
+.date-group option {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.date-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1240px) {
+  .img-box {
+    width: 24rem;
+    height: 33rem;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  #book_visit--container {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #book_visit--container {
+    width: 90%;
+  }
+  .img-details {
+    margin-right: 20rem;
+  }
+  .img-box {
+    width: 20rem;
+    height: 27.6rem;
+  }
+  #date--container > div {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .img-details {
+    margin-right: 18rem;
+  }
+  .img-box {
+    width: 18rem;
+    height: 24.8rem;
+  }
+  .img-front,
+  .img-back {
+    border-radius: 0.5rem;
+  }
+  .img-box:hover .img-front {
+    left: 115%;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .img-details {
+    margin-right: 3rem;
+  }
+
+  .img-front,
+  .img-back {
+    pointer-events: none;
+    transition: all 0.5s;
+  }
+  .img-front {
+    filter: brightness(100%);
+    top: 0.5rem;
+    left: 0.5rem !important;
+  }
+
+  .img-box:hover .img-back {
+    filter: brightness(85%);
+    transition: all 0.5s;
+  }
+  .img-box:hover .img-front {
+    top: 0.5rem !important;
+    left: 0.5rem !important;
+    filter: brightness(100%);
+    transition: all 0.5s !important;
+  }
+
+  .img-box {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 640px) {
+  #book-update--form input,
+  #book-update--form textarea,
+  #book-update--form label:not(.a-btn) {
+    font-size: 1.6rem;
+  }
+  #book_visit--container .fixed--menu + .visit--body {
+    margin-top: 8rem !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .send-request {
+    right: 2rem;
+    top: 7.5rem;
+  }
+  .doc-details {
+    margin: 1.5rem 1rem !important;
+  }
+  .form_image_upload {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form_image_upload img {
+    width: 12rem;
+    height: 16.5rem;
+    object-fit: cover;
+    background-color: #eee;
+    margin: 0 1.5rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .img-box {
+    width: 14rem;
+    height: 19.3rem;
+  }
+  .book_box {
+    flex-direction: column;
+    align-items: center;
+  }
+  #book-editors .user-show {
+    margin: 3rem 1rem;
+  }
+}
+
+@media (max-width: 390px) and (min-width: 320px) {
+  .fixed--menu .send-request h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 370px) and (min-width: 320px) {
+  .form_image_upload img {
+    width: 10rem;
+    height: 13.8rem;
+    object-fit: cover;
+    background-color: #eee;
+    margin: 0 1.2rem;
+  }
+  .form_image_upload label {
+    padding: 0.5rem 1rem;
+  }
+}

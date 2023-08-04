@@ -1,0 +1,51 @@
+extends base
+include _book_visit
+include _book_update
+block head
+
+block container
+    section.visit--container#book_visit--container
+        -if(user && !isSendRequest && book.existing && !book.reserved)
+            section#date--container.none
+                div
+                    .date-groups 
+                        .date-group 
+                            label(for='requestMonth') زمان اشتراک
+                            select#requestMonth(name="requestMonth" data-price= book.realPrice data-request-month = '2')
+                                option(value='2') دو ماه 
+                                option(value='4') چهار ماه 
+                                option(value='6') شش ماه 
+                                option(value='8') هشت ماه 
+                                option(value='10') ده ماه 
+                                option(value='12') یک سال 
+                        .date-group 
+                            label(for="requestMonth") هزینه اشتراک :
+                            h3#end-price #{book.defualtPrice} تومان
+                    .date-btn
+                        button#date--submit ارسال
+                        button.cancel--filter#date--cancel انصراف
+        -if(user && user.role !== 'user')
+            section#delete--container.none 
+                div 
+                    h3 آیا برای حذف کتاب مطمئن هستید ؟
+                    div
+                        button.accept#accept--delete بله 
+                        button.reject#reject--delete خیر 
+        section.visit--menu
+            -if(user)
+                -if(book.existing && !book.reserved && !isSendRequest)
+                    button(data-act="request-book") درخواست کتاب
+                button(data-act="copy-qr") کپی QR کد
+                -if(['admin','user-admin'].includes(!user || user.role))
+                    button#btn-update(data-act="edit") ویرایش
+                    button#btn-delete(data-act="remove") حذف
+                -if(isSendRequest)
+                    .send-request
+                        i.fas.fa-check-double.green
+                        h3.green شما برای این کتاب درخواست داده اید
+            -else if(book.existing && !book.reserved)
+                a.a-btn(href='/login') درخواست کتاب
+        section.visit--body 
+            +createBookVisit(book)
+            -if(['admin','user-admin'].includes(!user || user.role))
+                +createBookUpdate(book)

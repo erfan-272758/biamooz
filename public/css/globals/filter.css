@@ -1,0 +1,231 @@
+.filter--container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px) brightness(85%);
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  z-index: 250;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: fit-content;
+  margin-top: 20rem;
+  align-items: center;
+  background-color: rgba(250, 250, 250, 0.8);
+  border-radius: 1rem;
+}
+
+.filter .form {
+  margin: 0;
+}
+
+.filter .form input {
+  width: 100% !important;
+}
+
+.filter .form textarea {
+  min-width: 100% !important;
+  max-width: 100% !important;
+  margin: 2rem 1rem;
+}
+
+.cancel--filter {
+  width: fit-content;
+}
+.filter-body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80vh;
+}
+.filter .form button {
+  width: fit-content;
+}
+
+.filter-groups {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2.5rem !important;
+  overflow: auto;
+  flex-grow: 1;
+}
+.filter-property::before {
+  content: 'تطابق اطلاعات';
+  white-space: nowrap;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.filter-sort::before {
+  content: 'مرتب سازی بر اساس';
+  white-space: nowrap;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.filter-property {
+  background-color: rgba(245, 245, 245, 0.8);
+  margin-bottom: 2rem;
+  border-top-right-radius: 1rem;
+  padding-left: 3rem;
+  max-height: 100%;
+  flex-wrap: wrap;
+  max-width: 90%;
+  overflow-x: auto;
+}
+.filter-sort {
+  background-color: rgba(235, 235, 235, 0.8);
+  margin-bottom: 2rem;
+  border-top-left-radius: 1rem;
+}
+
+.filter-property .filter-group {
+  background-color: rgba(235, 235, 235, 0.5);
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  width: fit-content;
+  height: fit-content;
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+section.filter-group {
+  margin: 1.5rem 0.7rem !important;
+}
+.filter-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  margin-left: 3rem;
+}
+.filter-title label {
+  font-size: 1.3rem;
+  padding: 0.5rem 0.7rem;
+  white-space: nowrap;
+}
+
+.filter .form input[type='checkbox'],
+.filter .form input[type='radio'] {
+  width: min-content !important;
+  height: min-content;
+}
+
+.filter-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: right;
+  flex-wrap: wrap;
+  max-height: 100%;
+}
+
+.filter-detail select {
+  font-size: 1.2rem;
+  padding: 0.1rem 1.5rem 0.1rem 0.1rem;
+  background-color: transparent;
+  border: none;
+}
+.filter-detail select option {
+  font-size: 1.1rem;
+  padding: 0.1rem 1.5rem 0.1rem 0.1rem;
+  background-color: transparent;
+  border: none;
+}
+
+.filter-mini-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+  height: 3.2rem;
+  margin: 0.5rem 0;
+}
+
+.filter-mini-group label {
+  font-size: 1.3rem;
+  white-space: nowrap;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.filter-mini-group input[type='checkbox'] {
+  width: min-content;
+  height: min-content;
+}
+
+@media screen and (max-width: 1800px) {
+  .filter {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .filter {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .filter {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .filter {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .filter {
+    width: 70%;
+  }
+  .filter-sort .filter-group {
+    padding: 0;
+    margin: 0;
+  }
+  .filter-detail select {
+    padding: 0.1rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .filter {
+    width: 75%;
+  }
+
+  .filter-sort .filter-title {
+    margin: 0.1rem;
+    padding: 0.1rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .filter {
+    width: 80%;
+  }
+
+  .filter-group {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .filter {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .filter {
+    width: 90%;
+  }
+}

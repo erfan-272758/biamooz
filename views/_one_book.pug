@@ -1,0 +1,26 @@
+mixin createOneBookOverview(book)
+  .allbook_book
+    .card__picture
+      .card__picture--cover
+      img(src=`/${book.image[0]}` alt='عکس کتاب')
+    .allbook--details
+      .book_card--group
+        .book_card--mini-group
+          svg
+            use(xlink:href="/img/icons.svg#icon-info")
+          h5 #{book.name}
+        h5 #{book.level}
+      .book_card--group
+        .book_card--mini-group
+          svg
+            use(xlink:href="/img/icons.svg#icon-book-open")
+          h5 #{book.major}
+        h5 #{book.publisher}
+      -const str = book.existing ? `${book.reserved ? 'رزرو شده' : 'موجود '}` : 'ناموجود'
+      .book_card--group
+        .book_card--mini-group
+          svg
+            use(xlink:href="/img/icons.svg#icon-calendar")
+          h5 #{book.year}
+        h5(class = `${!book.reserved && book.existing ? 'green' : 'red'}`) #{str}
+    a.allbook--see.see(href=`books/${book._id}`) مشاهده

@@ -1,0 +1,61 @@
+extends base
+
+block container
+    section#signup--section
+        section.none#signup--rules
+            div 
+                a.a-btn#close--rules
+                    i.rotate.fas.fa-plus
+                ul
+                    li هر شخص حداکثر می تواند ده کتاب با هم دریافت کند.(دریافت کتاب بیشتر منوط به برگرداندن کتاب های قبلی می باشد)
+                    li به ازای هر ماه قرض گرفتن کتاب 4 درصد قیمت جلد کتاب از شما گرفته می شود.
+                    li به ازای هر روز تاخیر از زمان مقرر شده 0.04 درصد قیمت جلد کتاب به عنوان جریمه از اعتبار شما کاسته می شود. 
+                    li به ازای هر کتاب 5 هزار تومان به عنوان ضمانت از شما گرفته می شود.
+                    li هزینه ضمانت بعد از تحویل کتاب و کاستن جریمه به شما برگردانده می شود.  
+                    li در صورت وارد کردن آسیب جدی به کتاب خسارت آن بر عهده ی شما خواهد بود.
+                    li  شما می توانید کتاب ها را دو ماهه ، چهار ماهه ، شش ماهه ، هشت ماهه ، ده ماهه و یک ساله دریافت کنید.
+                    li لازم به ذکر است تمام قوانین با توجه به شورای گروه آموزشی بیاموز قابل تغییر بوده و قبل از اجرا به شما اطلاع رسانی می شود. 
+        ul
+            li تمام فیلد هایی که کنار آنها ستاره قرمز وجود دارند برای ثبت نام الزامی است.
+            li در پر کردن مشخصات خود دقت کنید.
+            li ایمیل وارد شده به عنوان ایمیل برای بازیابی رمز عبور و دریافت اخبار گروه آموزشی مورد استفاده قرار میگیرد
+        form.form.validation--form#signup--form
+            .form-group
+                input#firstName(type='text' minlength='2' required='' name='firstName')
+                label(for="firstName") نام
+            .form-group
+                input#lastName(type='text' minlength='2' required='' name='lastName')
+                label(for="lastName") نام خانوادگی 
+            .form-group
+                input#username(type='text' minlength='10' maxlength='10' required='' name='username')
+                label(for="username") کد ملی
+            .form-group
+                input#email(type='email' required='' name='email')
+                label(for="email") ایمیل 
+            .form-group
+                input#personalPhone(type='text' required='' minlength='11' maxlength='11' name='personalPhone')
+                label(for="personalPhone") تلفن شخصی
+            .form-group
+                input#password(type='password' required='' minlength='8' name='password')
+                label(for="password") رمز عبور
+            .form-group
+                input#passwordConfirm(type='password' required=''  minlength='8' name='passwordConfirm')
+                label(for="passwordConfirm") تکرار رمز عبور
+            .form-group
+                input#parentName(type='text' minlength='2' required=''  name='parentName')
+                label(for="parentName") نام پدر
+            .form-group
+                input#familyPhone(type='text' required='' minlength='11' maxlength='11' name='familyPhone')
+                label(for="familyPhone") شماره تلفن پدر 
+            .form-group
+                input#schoolName(type='text' minlength='2' required='' name='schoolName')
+                label(for="schoolName") نام مدرسه 
+            .form-group
+                textarea#address(name='address' cols='30' rows='10' )
+                label(for="address") آدرس
+            .form-group#rule-group
+                input#rules(type="checkbox" required name="rules")
+                label#label-rules(for='')
+                    span شرایط و ضوابط
+                    |       را خوانده و آن را قبول دارم.
+            button.signup--button ثبت نام

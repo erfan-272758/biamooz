@@ -1,0 +1,15 @@
+.header_container
+    a.title(href='/')
+        img.title--icon(src='/img/icon-larg.png' alt='بیاموز')
+        h1.title--text بیاموز
+    -if(!user)
+        .log_sign
+            a.log_sign--login(href='/login') ورود
+            a.log_sign--signup(href='/signup') ثبت نام
+    -else
+        .logout
+            a(href='/my')
+                img.photo-profile(src=`/${user.photo}` alt='عکس')
+                h1 #{user.firstName}
+            a.logout--logout(href='/logout') خروج
+    include new_site

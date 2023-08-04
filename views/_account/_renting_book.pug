@@ -1,0 +1,31 @@
+mixin rentingBooks()  
+    //- renting book
+    section#b-renting-book.none
+        -if (user.rentings.length === 0)
+            .empty-result
+                i.fas.fa-book
+                h1 هنوز کتابی کرایه نکرده اید
+        -else
+            table.table.renting-book--table
+                thead
+                    tr
+                        th عکس کتاب
+                        th نام کتاب
+                        th انتشارات
+                        th سال
+                        th زمان دریافت
+                        th زمان تحویل
+                        th هزینه اشتراک
+                tbody
+                    each renting in user.rentings
+                        if (renting.book)
+                            tr(data-id=`${renting.book._id}`)
+                                td
+                                    img.book_img--table(src=`/${renting.book.image[0]}` alt='عکس')
+                                td #{renting.book.name}
+                                td #{renting.book.publisher}
+                                td #{renting.book.year}
+                                td #{renting.start}
+                                td #{renting.end}
+                                td #{renting.price}
+    //- end of renting book

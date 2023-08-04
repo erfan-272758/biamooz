@@ -1,0 +1,47 @@
+mixin insertBook() 
+    // insert boon user-admin admin
+    section#b-insert-book-u-a_a.none
+        form.form.insert-book--form
+            .form_image_upload
+                img#book-image-0(src='/img/books/book.png' alt='عکس پروفایل')
+                img#book-image-1(src='/img/books/book.png' alt='عکس پروفایل')
+                label.a-btn(for="image") آپلود تصویر 
+                input#image.image_upload.none(type='file' name='image' accept='image/*' multiple='')
+            input#name(type='text' name='name' placeholder='نام' required='')
+            .form-group
+                label(for='level') پایه
+                select#level(name='level' required='')
+                    option(value='دهم') دهم
+                    option(value='یازدهم') یازدهم
+                    option(value='پایه') پایه
+                    option(value='دوازدهم') دوازدهم
+                    option(value='جامع') جامع
+            .form-group
+                label(for='major') رشته
+                select#major(name='major' required='')
+                    option(value='ریاضی') ریاضی
+                    option(value='تجربی') تجربی
+                    option(value='انسانی') انسانی
+                    option(value='عمومی') عمومی
+                    option(value='ریاضی-تجربی') ریاضی-تجربی
+                    option(value='کتابچه عمومی') کتابچه عمومی
+                    option(value='کتابچه تخصصی') کتابچه تخصصی
+            .form-group
+                label(for='publisher') انتشارات
+                select#publisher(name='publisher' required='')
+                    option(value='خیلی سبز') خیلی سبز
+                    option(value='گاج') گاج
+                    option(value='مهر و ماه') مهر و ماه
+                    option(value='مبتکران') مبتکران
+                    option(value='نشر الگو') نشر الگو
+                    option(value='نشر دریافت') نشر دریافت
+                    option(value='کانون قلمچی') کانون قلمچی
+                    option(value='خوشخوان') خوشخوان
+                    option(value='سفیر خرد') سفیر خرد
+                    option(value='فار') فار
+                    option(value='دیگر') دیگر
+            input#year(type='number' name='year' placeholder='سال' required='')
+            input#price(type='number' name='price' placeholder='قیمت' required='')
+            textarea#summery(name='summery' cols='30' rows='10' placeholder='توضیحات' )
+            button ذخیره
+    // end of insert book

@@ -1,0 +1,120 @@
+/* form */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+  width: 100%;
+}
+.validation--form input:focus:invalid {
+  border-bottom: 0.1rem solid red !important;
+}
+.validation--form input:focus:valid {
+  border-bottom: 0.1rem solid green !important;
+}
+.form input {
+  margin: 2rem 0;
+  font-size: 1.3rem;
+  padding: 0.4rem;
+  width: 60%;
+  border: none;
+  border-bottom: 0.1rem dashed rgb(180, 180, 180);
+  background-color: transparent;
+  transition: all 0.5s;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-bottom: 0.1rem solid rgb(180, 180, 180);
+}
+
+.form textarea {
+  margin: 2rem 0;
+  font-size: 1.3rem;
+  padding: 0.2rem;
+  min-width: 60%;
+  max-width: 60%;
+  height: 10rem;
+  min-height: 10rem;
+  max-height: 20rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1rem dashed rgb(180, 180, 180);
+}
+
+.form-group {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 0.1rem;
+}
+
+.form-group label {
+  font-size: 1.3rem;
+  color: #777;
+  margin: 0.1rem 0 0.1rem 1rem;
+}
+
+.form-group select {
+  margin: 0.1rem 1rem 0.1rem 0;
+  font-size: 1.3rem;
+  padding: 0.4rem 1.5rem 0.5rem 1rem;
+  background-color: transparent;
+}
+
+.form-group select option {
+  margin: 1rem;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  background-color: transparent;
+}
+/* 
+.form-group select option:nth-child(3) {
+  selected: true;
+  select: true;
+} */
+.form button {
+  width: 30%;
+}
+
+/* end of form */
+
+@media screen and (max-width: 800px) {
+  .form-group select option {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .form-group select option {
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 1.1rem;
+  }
+
+  .form input {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .form input {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form input {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .form-group select {
+    margin: 0.1rem 0.5rem 0.1rem 0;
+    padding: 0.2rem 0.5rem 0.3rem 0.5rem;
+  }
+}

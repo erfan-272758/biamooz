@@ -1,0 +1,88 @@
+mixin filterRents(isAdmin)
+  section.filter
+    form.form(id=`${isAdmin ? 'filter-allrents--form': 'filter-alluser-rents--form'}`)
+      .filter-body
+        .filter-groups.filter-property
+          -if(isAdmin)
+            .filter-group.allrents--filter--group
+              .filter-title
+                input(type='text' name='user.username' placeholder='کد ملی کاربر')
+            .filter-group.allrents--filter--group
+              .filter-title
+                input(type='email' name='user.email' placeholder='ایمیل کاربر')
+          .filter-group
+            .filter-title
+              input(type='text' name='book' placeholder='QR کد کتاب')
+          .filter-group
+            .filter-title
+              label(for='state') وضعیت کرایه
+            .filter-detail
+              .filter-mini-group
+                input(type='checkbox' name='state' value='sendRequest')
+                label(for='state') درخواست شده
+              .filter-mini-group
+                input(type='checkbox' name='state' value='acceptRequest')
+                label(for='state') درخواست قبول شده
+              .filter-mini-group
+                input(type='checkbox' name='state' value='rejectRequest')
+                label(for='state') درخواست رد شده
+              .filter-mini-group
+                input(type='checkbox' name='state' value='failRenting')
+                label(for='state') کرایه با خطا مواجه شده
+              .filter-mini-group
+                input(type='checkbox' name='state' value='startRenting')
+                label(for='state') کرایه داده شده
+              .filter-mini-group
+                input(type='checkbox' name='state' value='endRenting')
+                label(for='state') کرایه پایان یافته
+        .filter-groups.filter-sort
+          .filter-group
+            .filter-title
+              input(type='checkbox' name='sort' value='request')
+              label(for='sort') زمان درخواست
+            .filter-detail
+              select(name='sort')
+                option(value='request_1') صعودی
+                option(value='request_-1') نزولی
+          .filter-group
+            .filter-title
+              input(type='checkbox' name='sort' value='start')
+              label(for='sort') زمان شروع کرایه
+            .filter-detail
+              select(name='sort')
+                option(value='start_1') صعودی
+                option(value='start_-1') نزولی
+          .filter-group
+            .filter-title
+              input(type='checkbox' name='sort' value='end')
+              label(for='sort') زمان پایان کرایه
+            .filter-detail
+              select(name='sort')
+                option(value='end_1') صعودی
+                option(value='end_-1') نزولی
+          .filter-group
+            .filter-title
+              input(type='checkbox' name='sort' value='price')
+              label(for='sort') هزینه
+            .filter-detail
+              select(name='sort')
+                option(value='price_1') صعودی
+                option(value='price_-1') نزولی
+          .filter-group
+            .filter-title
+              input(type='checkbox' name='sort' value='delay')
+              label(for='sort') تاخیر
+            .filter-detail
+              select(name='sort')
+                option(value='delay_1') صعودی
+                option(value='delay_-1') نزولی
+          .filter-group
+            .filter-title
+              input(type='checkbox' name='sort' value='penalty')
+              label(for='sort') جریمه
+            .filter-detail
+              select(name='sort')
+                option(value='penalty_1') صعودی
+                option(value='penalty_-1') نزولی
+      button اعمال
+    button.cancel--filter(id=`${isAdmin ? 'allrents_filter--cancel': 'alluser-rents_filter--cancel'}`) انصراف

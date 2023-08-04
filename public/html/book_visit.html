@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <script defer src="./script.js"></script>
+    <title>بیاموز</title>
+    <link rel="icon shortcout" href="./img/icon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container">
+        <a href="./" class="title">
+          <img src="./img/icon.png" alt="بیاموز" class="title--icon" />
+          <h1 class="title--text">بیاموز</h1>
+        </a>
+        <div class="log_sign">
+          <a href="./login.html" class="log_sign--login">ورود</a>
+          <a href="./signup.html" class="log_sign--signup">ثبت نام</a>
+        </div>
+        <div class="logout">
+          <a href="/my">
+            <img src="./img/users/user.jpg" alt="عکس" />
+            <h1>محمد عرفان</h1>
+          </a>
+          <a href="#" class="logout--logout">خروج</a>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <!-- book visit container -->
+      <section class="visit--container">
+        <!-- menu -->
+        <section class="visit--menu">
+          <button id="send-request--button" class="">درخواست کتاب</button>
+          <button id="copy-qr--button" class="">کپی QR کد</button>
+          <button class="update-book--button save-book--button">ویرایش</button>
+          <button class="delete-book--button cancel-book--button">حذف</button>
+        </section>
+        <!-- end of menu -->
+
+        <!-- body -->
+        <section class="visit--body">
+          <!-- book visit -->
+          <section id="book-visit" class="doc-visit">
+            <!-- book details -->
+            <div class="doc-details">
+              <div class="doc-images">
+                <img
+                  id="book-image-0"
+                  src="./img/books/book.png"
+                  alt="عکس پروفایل"
+                />
+                <img
+                  id="book-image-1"
+                  src="./img/books/book.png"
+                  alt="عکس پروفایل"
+                />
+              </div>
+              <div class="details">
+                <h3 class="title">نام کتاب :</h3>
+                <h3 class="detail">نردبام</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">انتشارات :</h3>
+                <h3 class="detail">خیلی سبز</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">رشته :</h3>
+                <h3 class="detail">ریاضی</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">سال انتشار :</h3>
+                <h3 class="detail">1400</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">قیمت کتاب :</h3>
+                <h3 class="detail">23500</h3>
+              </div>
+              <div class="details">
+                <h3 class="title">توضیحات :</h3>
+                <p class="detail">
+                  کتاب خیلی خوبی است و این کتاب برای کنکور 1401 پیشنهاد میشود در
+                  ضمن متباسب با قیمت پایین کتاب هزینه کرایه کمتری خواهید داد و
+                  از ان جایی که تعداد محدود است پس تردید نکنید
+                </p>
+              </div>
+              <div class="details">
+                <h3 class="title">وضعیت :</h3>
+                <h3 class="detail">رزو نیست</h3>
+              </div>
+              <div class="details">
+                <h3 class="detail">موجود است</h3>
+              </div>
+            </div>
+            <!-- end of book details -->
+
+            <!-- book renter -->
+            <div id="book-renter" class="user-show">
+              <img src="./img/users/user.jpg" alt="عکس" />
+              <div>
+                <h3>محمد عرفان مهوش محمدی</h3>
+                <h4>09390958379</h4>
+              </div>
+            </div>
+            <!-- end of book renter -->
+
+            <!-- book editors -->
+            <div id="book-editors">
+              <div class="user-show">
+                <img src="./img/users/user.jpg" alt="عکس" />
+                <div>
+                  <h3>محمد عرفان مهوش محمدی</h3>
+                  <h4>09390958379</h4>
+                  <p>کتاب را ایجاد کرده است</p>
+                  <h4>1 تیر 1400</h4>
+                </div>
+              </div>
+              <div class="user-show">
+                <img src="./img/users/user.jpg" alt="عکس" />
+                <div>
+                  <h3>محمد عرفان مهوش محمدی</h3>
+                  <h4>09390958379</h4>
+                  <p>قیمت کتاب را به 53200 تغییر داده است</p>
+                  <h4>12 تیر 1400</h4>
+                </div>
+              </div>
+              <div class="user-show">
+                <img src="./img/users/user.jpg" alt="عکس" />
+                <div>
+                  <h3>محمد عرفان مهوش محمدی</h3>
+                  <h4>09390958379</h4>
+                  <p>وضعیت کتاب را ناموجود کرده است</p>
+                  <h4>15 تیر 1400</h4>
+                </div>
+              </div>
+              <div class="user-show">
+                <img src="./img/users/user.jpg" alt="عکس" />
+                <div>
+                  <h3>محمد عرفان مهوش محمدی</h3>
+                  <h4>09390958379</h4>
+                  <p>وضعیت کتاب را موجود کرده است</p>
+                  <h4>1 شهریور 1400</h4>
+                </div>
+              </div>
+            </div>
+            <!-- end of book editors -->
+          </section>
+          <!-- end of book visit -->
+
+          <!-- book update -->
+          <section id="book-update" class="none">
+            <form class="form book-update--form">
+              <div class="form_image_upload">
+                <img
+                  id="book-image-0"
+                  src="./img/books/book.png"
+                  alt="عکس پروفایل"
+                />
+                <img
+                  id="book-image-1"
+                  src="./img/books/book.png"
+                  alt="عکس پروفایل"
+                />
+                <input
+                  type="file"
+                  id="image"
+                  name="image"
+                  accept="image/*"
+                  class="image_upload"
+                  multiple
+                />
+              </div>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="نام"
+                required
+              />
+              <div class="form-group">
+                <label for="publisher">انتشارات</label>
+                <select name="publisher" id="publisher" required>
+                  <option value="خیلی سبز">خیلی سبز</option>
+                  <option value="گاج">گاج</option>
+                  <option value="مهر و ماه">مهر و ماه</option>
+                  <option value="مبتکران">مبتکران</option>
+                  <option value="نشر الگو">نشر الگو</option>
+                  <option value="نشر دریافت">نشر دریافت</option>
+                  <option value="کانون قلمچی">کانون قلمچی</option>
+                  <option value="دیگر">دیگر</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="major">رشته</label>
+                <select name="major" id="major" required>
+                  <option value="ریاضی">ریاضی</option>
+                  <option value="تجربی">تجربی</option>
+                  <option value="انسانی">انسانی</option>
+                  <option value="عمومی">عمومی</option>
+                  <option value="ریاضی-تجربی">ریاضی-تجربی</option>
+                  <option value="کتابچه عمومی">کتابچه عمومی</option>
+                  <option value="کتابچه تخصصی">کتابچه تخصصی</option>
+                </select>
+              </div>
+              <input
+                type="number"
+                id="year"
+                name="year"
+                placeholder="سال"
+                required
+              />
+              <input
+                type="number"
+                id="price"
+                name="price"
+                placeholder="قیمت"
+                required
+              />
+              <textarea
+                name="summery"
+                id="summery"
+                cols="30"
+                rows="10"
+                placeholder="توضیحات"
+                required
+              ></textarea>
+              <button>ذخیره</button>
+            </form>
+          </section>
+          <!-- end of book update -->
+        </section>
+        <!-- end of body -->
+      </section>
+      <!-- end of book visit container-->
+    </div>
+    <footer class="footer">
+      <div class="footer_logo">
+        <img src="./img/icon.png" alt="لگو" />
+        <h6>گروه آموزشی بیاموز</h6>
+      </div>
+      <p class="footer_copyright">
+        تمام حقوق سایت متعلق به گروه آموزشی بیاموز می باشد &copy;
+      </p>
+    </footer>
+  </body>
+</html>

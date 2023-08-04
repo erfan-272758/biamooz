@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <script defer src="./script.js"></script>
+    <title>بیاموز</title>
+    <link rel="icon shortcout" href="../img/icon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container">
+        <a href="./" class="title">
+          <img src="../img/icon.png" alt="بیاموز" class="title--icon" />
+          <h1 class="title--text">بیاموز</h1>
+        </a>
+        <div class="log_sign">
+          <a href="./login.html" class="log_sign--login">ورود</a>
+          <a href="./signup.html" class="log_sign--signup">ثبت نام</a>
+        </div>
+        <div class="logout">
+          <a href="/my">
+            <img src="../img/users/user.png" alt="عکس" />
+            <h1>محمد عرفان</h1>
+          </a>
+          <a href="#" class="logout--logout">خروج</a>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <!-- profile -->
+      <section class="profile">
+        <!-- profile menu -->
+
+        <section class="profile--menu">
+          <div class="menu-btn none">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+          <div class="menu-list">
+            <ul>
+              <li>
+                <a id="m-personal-info" href="#b-personal-info">اطلاعات شخصی</a>
+              </li>
+              <li>
+                <a id="m-renting-book" href="#b-renting-book"
+                  >کتاب های در دست</a
+                >
+              </li>
+              <li>
+                <a id="m-requests-list-u" href="#b-requests-list-u"
+                  >لیست درخواست های من</a
+                >
+              </li>
+              <li>
+                <a id="m-insert-book-u-a_a" href="#b-insert-book-u-a_a"
+                  >اضافه کردن کتاب</a
+                >
+              </li>
+              <li>
+                <a id="m-requests-list-u-a_a" href="#b-requests-list-u-a_a"
+                  >لیست درخواست های کاربران</a
+                >
+              </li>
+              <li>
+                <a id="m-users-list-a" href="#b-users-list-a">لیست کاربر ها</a>
+              </li>
+              <li><a id="m-aggregate-a" href="#b-aggregate-a">آمار ها</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- end of profile menu -->
+
+        <!-- profile body -->
+        <section class="profile--body">
+          <!-- personal info -->
+          <section id="b-personal-info" class="none">
+            <form class="form public--form">
+              <div class="form_photo_upload">
+                <img src="./img/users/user.jpg" alt="عکس پروفایل" />
+                <input
+                  type="file"
+                  id="photo"
+                  name="photo"
+                  accept="image/*"
+                  class="photo_upload"
+                />
+              </div>
+              <input
+                type="text"
+                minlength="2"
+                required
+                placeholder="نام"
+                id="firstName"
+                name="firstName"
+                value="محمد عرفان"
+              />
+              <input
+                type="text"
+                minlength="2"
+                required
+                placeholder="نام خانوادگی"
+                id="lastName"
+                name="lastName"
+                value="مهوش محمدی"
+              />
+              <input
+                type="text"
+                minlength="10"
+                maxlength="10"
+                required
+                placeholder="کد ملی"
+                id="username"
+                name="username"
+                enabled="false"
+                value="1130563588"
+              />
+              <input
+                type="email"
+                required
+                placeholder="ایمیل"
+                id="email"
+                name="email"
+                value="erfan27758@gmail.com"
+              />
+              <input
+                type="text"
+                required
+                minlength="11"
+                maxlength="11"
+                placeholder="شماره تلفن شخصی"
+                id="personalPhone"
+                name="personalPhone"
+                value="09390958379"
+              />
+              <input
+                type="text"
+                minlength="2"
+                required
+                placeholder="نام پدر"
+                id="parentName"
+                name="parentName"
+                value="منصور"
+              />
+              <input
+                type="text"
+                required
+                minlength="11"
+                maxlength="11"
+                placeholder="شماره تلفن پدر"
+                id="familyPhone"
+                name="familyPhone"
+                value="09132174304"
+              />
+              <input
+                type="text"
+                minlength="2"
+                required
+                placeholder="نام مدرسه"
+                id="schoolName"
+                name="schoolName"
+                value="اژه ای"
+              />
+              <textarea
+                name="address"
+                id="address"
+                cols="30"
+                rows="10"
+                placeholder="آدرس"
+              >
+  خ شریعتی</textarea
+              >
+              <button class="public--save">ذخیره</button>
+            </form>
+            <form action="" class="form private--form">
+              <input
+                type="password"
+                required
+                placeholder="رمز عبور فعلی"
+                minlength="8"
+                id="passwordCurrent"
+                name="passwordCurrent"
+              />
+              <input
+                type="password"
+                required
+                placeholder="رمز عبور جدید"
+                minlength="8"
+                id="password"
+                name="password"
+              />
+              <input
+                type="password"
+                required
+                placeholder="تکرار رمز عبور"
+                minlength="8"
+                id="passwordConfirm"
+                name="passwordConfirm"
+              />
+              <button class="private--save">ذخیره</button>
+            </form>
+          </section>
+          <!-- end of personal info -->
+
+          <!-- renting book -->
+          <section id="b-renting-book" class="none">
+            <table class="table renting-book--table">
+              <thead>
+                <tr>
+                  <th>عکس کتاب</th>
+                  <th>نام کتاب</th>
+                  <th>انتشارات</th>
+                  <th>رشته</th>
+                  <th>سال</th>
+                  <th>قیمت</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>خیلی سبز</td>
+                  <td>ریاضی</td>
+                  <td>1400</td>
+                  <td>53000</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>خیلی سبز</td>
+                  <td>ریاضی</td>
+                  <td>1400</td>
+                  <td>53000</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>خیلی سبز</td>
+                  <td>ریاضی</td>
+                  <td>1400</td>
+                  <td>53000</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>خیلی سبز</td>
+                  <td>ریاضی</td>
+                  <td>1400</td>
+                  <td>53000</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>خیلی سبز</td>
+                  <td>ریاضی</td>
+                  <td>1400</td>
+                  <td>53000</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>خیلی سبز</td>
+                  <td>ریاضی</td>
+                  <td>1400</td>
+                  <td>53000</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- end of renting book -->
+
+          <!-- insert boon user-admin admin -->
+          <section id="insert-book-u-a_a" class="none">
+            <form class="form insert-book--form">
+              <div class="form_image_upload">
+                <img
+                  id="book-image-0"
+                  src="./img/books/book.png"
+                  alt="عکس پروفایل"
+                />
+                <img
+                  id="book-image-1"
+                  src="./img/books/book.png"
+                  alt="عکس پروفایل"
+                />
+                <input
+                  type="file"
+                  id="image"
+                  name="image"
+                  accept="image/*"
+                  class="image_upload"
+                  multiple
+                />
+              </div>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="نام"
+                required
+              />
+              <div class="form-group">
+                <label for="publisher">انتشارات</label>
+                <select name="publisher" id="publisher" required>
+                  <option value="خیلی سبز">خیلی سبز</option>
+                  <option value="گاج">گاج</option>
+                  <option value="مهر و ماه">مهر و ماه</option>
+                  <option value="مبتکران">مبتکران</option>
+                  <option value="نشر الگو">نشر الگو</option>
+                  <option value="نشر دریافت">نشر دریافت</option>
+                  <option value="کانون قلمچی">کانون قلمچی</option>
+                  <option value="دیگر">دیگر</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="major">رشته</label>
+                <select name="major" id="major" required>
+                  <option value="ریاضی">ریاضی</option>
+                  <option value="تجربی">تجربی</option>
+                  <option value="انسانی">انسانی</option>
+                  <option value="عمومی">عمومی</option>
+                  <option value="ریاضی-تجربی">ریاضی-تجربی</option>
+                  <option value="کتابچه عمومی">کتابچه عمومی</option>
+                  <option value="کتابچه تخصصی">کتابچه تخصصی</option>
+                </select>
+              </div>
+              <input
+                type="number"
+                id="year"
+                name="year"
+                placeholder="سال"
+                required
+              />
+              <input
+                type="number"
+                id="price"
+                name="price"
+                placeholder="قیمت"
+                required
+              />
+              <textarea
+                name="summery"
+                id="summery"
+                cols="30"
+                rows="10"
+                placeholder="توضیحات"
+                required
+              ></textarea>
+              <button>ذخیره</button>
+            </form>
+          </section>
+          <!-- end of insert book-->
+
+          <!-- requests list user -->
+          <section id="b-requests-list-u" class="none">
+            <div class="container--query">
+              <form class="form--query--search requests-list-u--form">
+                <input
+                  type="search"
+                  class="query--search"
+                  placeholder="نام کتاب را وارد کنید"
+                />
+                <button class="query--button">بیاب</button>
+              </form>
+              <button class="query--filter requests-list-u_filter">
+                فیلتر کن
+              </button>
+            </div>
+            <table class="table requests-list-u--table">
+              <thead>
+                <tr>
+                  <th>عکس کتاب</th>
+                  <th>نام کتاب</th>
+                  <th>قیمت کتاب</th>
+                  <th>زمان درخواست</th>
+                  <th>زمان دریافت</th>
+                  <th>زمان تحویل</th>
+                  <th>وضعیت</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pages">
+              <a id="requests-list-u--prvious" href="#">قبلی</a>
+              <h6 id="requests-list-u--page">1</h6>
+              <a id="requests-list-u--prvious" href="#">بعدی</a>
+            </div>
+          </section>
+          <!-- end of requests list user -->
+
+          <!-- requests list user-admin and admin -->
+          <section id="b-requests-list-u-a_a" class="none">
+            <div class="container--query">
+              <form class="form--query--search requests-list-u-a_a--form">
+                <input
+                  type="search"
+                  class="query--search"
+                  placeholder="تلفن شخصی کاربر را وارد کنید"
+                />
+                <button class="query--button">بیاب</button>
+              </form>
+              <button class="query--filter requests-list-u-a_a_filter">
+                فیلتر کن
+              </button>
+            </div>
+            <table class="table requests-list-u-a_a--table">
+              <thead>
+                <tr>
+                  <th>عکس کاربر</th>
+                  <th>نام و نام خانوادگی کاربر</th>
+                  <th>شماره تماس کاربر</th>
+                  <th>عکس کتاب</th>
+                  <th>نام کتاب</th>
+                  <th>قیمت کتاب</th>
+                  <th>زمان درخواست</th>
+                  <th>زمان دریافت</th>
+                  <th>زمان تحویل</th>
+                  <th>وضعیت</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>09390958379</td>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>09390958379</td>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>09390958379</td>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>09390958379</td>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>09390958379</td>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>09390958379</td>
+                  <td>
+                    <img
+                      src="./img/books/book.png"
+                      class="book_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>نردبام</td>
+                  <td>53000</td>
+                  <td>12 تیر 1400</td>
+                  <td>14 تیر 1400</td>
+                  <td>1 مرداد 1400</td>
+                  <td>تحویل داده شد</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pages">
+              <a id="requests-list-u-a_a--prvious" href="#">قبلی</a>
+              <h6 id="requests-list-u-a_a--page">1</h6>
+              <a id="requests-list-u-a_a--prvious" href="#">بعدی</a>
+            </div>
+          </section>
+          <!-- end of requests list user-admin and admin -->
+
+          <!-- users list admin -->
+          <section id="b-users-list-a" class="none">
+            <div class="container--query">
+              <form class="form--query--search users-list-a--form">
+                <input
+                  type="search"
+                  class="query--search"
+                  placeholder="نام کاربر را وارد کنید"
+                />
+                <button class="query--button">بیاب</button>
+              </form>
+              <button class="query--filter users-list-a_filter">
+                فیلتر کن
+              </button>
+            </div>
+            <table class="table users-list-a--table">
+              <thead>
+                <tr>
+                  <th>عکس کاربر</th>
+                  <th>نام و نام خانوادگی کاربر</th>
+                  <th>نام پدر</th>
+                  <th>شماره تماس کاربر</th>
+                  <th>کد ملی</th>
+                  <th>رتبه کاربر</th>
+                  <th>وضعیت کاربر</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>منصور</td>
+                  <td>09390958379</td>
+                  <td>1130563588</td>
+                  <td>معمولی</td>
+                  <td>فعال</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>منصور</td>
+                  <td>09390958379</td>
+                  <td>1130563588</td>
+                  <td>معمولی</td>
+                  <td>فعال</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>منصور</td>
+                  <td>09390958379</td>
+                  <td>1130563588</td>
+                  <td>معمولی</td>
+                  <td>فعال</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>منصور</td>
+                  <td>09390958379</td>
+                  <td>1130563588</td>
+                  <td>معمولی</td>
+                  <td>فعال</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>منصور</td>
+                  <td>09390958379</td>
+                  <td>1130563588</td>
+                  <td>معمولی</td>
+                  <td>فعال</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/users/user.jpg"
+                      class="user_img--table"
+                      alt="عکس"
+                    />
+                  </td>
+                  <td>محمد عرفان مهوش محمدی</td>
+                  <td>منصور</td>
+                  <td>09390958379</td>
+                  <td>1130563588</td>
+                  <td>معمولی</td>
+                  <td>فعال</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pages">
+              <a id="users-list-a--prvious" href="#">قبلی</a>
+              <h6 id="users-list-a--page">1</h6>
+              <a id="users-list-a--prvious" href="#">بعدی</a>
+            </div>
+          </section>
+          <!-- end of users list admin -->
+
+          <!-- aggregate admin -->
+          <section id="b-aggregate-a" class="none">آمار ها</section>
+          <!-- end of aggregate admin -->
+        </section>
+        <!-- end of profile body -->
+      </section>
+      <!-- end of  profile-->
+    </div>
+    <footer class="footer">
+      <div class="footer_logo">
+        <img src="./img/icon.png" alt="لگو" />
+        <h6>گروه آموزشی بیاموز</h6>
+      </div>
+      <p class="footer_copyright">
+        تمام حقوق سایت متعلق به گروه آموزشی بیاموز می باشد &copy;
+      </p>
+    </footer>
+  </body>
+</html>

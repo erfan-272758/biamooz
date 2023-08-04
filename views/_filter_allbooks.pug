@@ -1,0 +1,184 @@
+section.filter
+  form#filter-allbooks--form.form
+    .filter-body
+      .filter-groups.filter-property
+        section.filter-group
+          .filter-title
+            label(for='') پایه
+          .filter-detail
+            .filter-mini-group
+              input(type='checkbox' name='level' value='دهم')
+              label(for='level') دهم
+            .filter-mini-group
+              input(type='checkbox' name='level' value='یازدهم')
+              label(for='level') یازدهم
+            .filter-mini-group
+              input(type='checkbox' name='level' value='پایه')
+              label(for='level') پایه
+            .filter-mini-group
+              input(type='checkbox' name='level' value='دوازدهم')
+              label(for='level') دوازدهم
+            .filter-mini-group
+              input(type='checkbox' name='level' value='جامع')
+              label(for='level') جامع
+        section.filter-group
+          .filter-title
+            label(for='') رشته
+          .filter-detail
+            .filter-mini-group
+              input(type='checkbox' name='major' value='ریاضی')
+              label(for='major') ریاضی
+            .filter-mini-group
+              input(type='checkbox' name='major' value='تجربی')
+              label(for='major') تجربی
+            .filter-mini-group
+              input(type='checkbox' name='major' value='انسانی')
+              label(for='major') انسانی
+            .filter-mini-group
+              input(type='checkbox' name='major' value='عمومی')
+              label(for='major') عمومی
+            .filter-mini-group
+              input(type='checkbox' name='major' value='ریاضی-تجربی')
+              label(for='major') ریاضی-تجربی
+            .filter-mini-group
+              input(type='checkbox' name='major' value='کتابچه عمومی')
+              label(for='major') کتابچه عمومی
+            .filter-mini-group
+              input(type='checkbox' name='major' value='کتابچه تخصصی')
+              label(for='major') کتابچه تخصصی
+        section.filter-group
+          .filter-title
+            label(for='') انتشارات
+          .filter-detail
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='خیلی سبز')
+              label(for='publisher') خیلی سبز
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='گاج')
+              label(for='publisher') گاج
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='مهر و ماه')
+              label(for='publisher') مهر و ماه
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='مبتکران')
+              label(for='publisher') مبتکران
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='نشر الگو')
+              label(for='publisher') نشر الگو
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='نشر دریافت')
+              label(for='publisher') نشر دریافت
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='کانون قلمچی')
+              label(for='publisher') کانون قلمچی
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='خوشخوان')
+              label(for='publisher') خوشخوان
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='سفیر خرد')
+              label(for='publisher') سفیر خرد
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='فار')
+              label(for='publisher') فار
+            .filter-mini-group
+              input(type='checkbox' name='publisher' value='دیگر')
+              label(for='publisher') دیگر
+        section.filter-group
+          .filter-title
+            label(for='') سال انتشار
+          .filter-detail
+            .filter-mini-group
+              input(type='checkbox' name='year' value='1401')
+              label(for='year') 1401
+            .filter-mini-group
+              input(type='checkbox' name='year' value='1400')
+              label(for='year') 1400
+            .filter-mini-group
+              input(type='checkbox' name='year' value='1399')
+              label(for='year') 1399
+            .filter-mini-group
+              input(type='checkbox' name='year' value='1398')
+              label(for='year') 1398
+            .filter-mini-group
+              input(type='checkbox' name='year' value='1397')
+              label(for='year') 1397
+        .filter-group
+          .filter-title
+            input(type='number' name='price' placeholder='قیمت')
+          .filter-detail
+            .filter-mini-group
+              input(type='radio' name='price-eq' value='gt')
+              label(for='price-eq') بیشتر
+            .filter-mini-group
+              input(type='radio' name='price-eq' value='eq' checked='')
+              label(for='price-eq') مساوی
+            .filter-mini-group
+              input(type='radio' name='price-eq' value='lt')
+              label(for='price-eq') کمتر
+      .filter-groups.filter-sort
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='name')
+            label(for='sort') نام
+          .filter-detail
+            select(name='sort')
+              option(value='name_1') صعودی
+              option(value='name_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='level')
+            label(for='sort') پایه
+          .filter-detail
+            select(name='sort')
+              option(value='level_1') صعودی
+              option(value='level_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='major')
+            label(for='sort') رشته
+          .filter-detail
+            select(name='sort')
+              option(value='major_1') صعودی
+              option(value='major_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='publisher')
+            label(for='sort') انتشارات
+          .filter-detail
+            select(name='sort')
+              option(value='publisher_1') صعودی
+              option(value='publisher_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='year')
+            label(for='sort') سال انتشار
+          .filter-detail
+            select(name='sort')
+              option(value='year_1') صعودی
+              option(value='year_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='price')
+            label(for='sort') قیمت
+          .filter-detail
+            select(name='sort')
+              option(value='price_1') صعودی
+              option(value='price_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='reserved')
+            label(for='sort') رزرو بودن
+          .filter-detail
+            select(name='sort')
+              option(value='reserved_1') صعودی
+              option(value='reserved_-1') نزولی
+        .filter-group
+          .filter-title
+            input(type='checkbox' name='sort' value='existing')
+            label(for='sort') موجود بودن
+          .filter-detail
+            select(name='sort')
+              option(value='existing_1') صعودی
+              option(value='existing_-1') نزولی
+    button اعمال
+  button.cancel--filter#allbook_filter--cancel انصراف

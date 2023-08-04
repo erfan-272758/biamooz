@@ -1,0 +1,66 @@
+extends base
+block container
+    section#rent_visit--container.visit--container
+        section#delete--container.none 
+            div 
+                h3 آیا برای حذف درخواست کرایه مطمئن هستید ؟
+                div
+                    button.accept#accept--delete بله 
+                    button.reject#reject--delete خیر 
+
+        section.rent_visit-book-user
+            -if(rent.book)
+                .doc-show.book-show#book--rent(data-url=`/books/${rent.book._id}`)
+                    img(src=`/${rent.book.image[0]}` alt='عکس')
+                    div
+                        h3 #{rent.book.name}
+                        h4 #{rent.book.year}
+                        .book-show-group
+                            h4 قیمت :
+                            h4 #{rent.book.price} تومان
+            -if(user.role !== 'user' && rent.user)
+                .doc-show.user-show#user--rent(data-url=`/users/${rent.user._id}`)
+                    img.photo-profile(src=`/${rent.user.photo}` alt='عکس')
+                    div
+                        h3 #{rent.user.firstName} #{rent.user.lastName}
+                        h4 #{rent.user.personalPhone}
+                        .book-show-group
+                            h4 سرمایه ذخیره :
+                            h4 #{rent.user.box} تومان
+        section.doc-details
+
+            #state-rent.details
+                h3.title وضعیت :
+                h3.detail #{stateMessage}
+            #request-time--rent.details
+                h3.title زمان درخواست :
+                h3.detail #{rent.request}
+                //- +dateConvertor_h3(rent.request)
+            -if(['startRenting','endRenting'].includes(rent.state))
+                #start-time--rent.details
+                    h3.title زمان دریافت :
+                    h3.detail #{rent.start}
+            #end-time--rent.details
+                h3.title(data-end = rent.end) زمان تحویل :
+                -if(['startRenting','endRenting'].includes(rent.state))
+                    h3.detail #{rent.end}
+                -else
+                    h3.detail #{rent.requestMonth} ماه بعد از دریافت 
+            #price--rent.details
+                h3.title هزینه اشتراک :
+                h3.detail #{rent.price} تومان
+            -if(rent.state === 'endRenting')
+                #delay--rent.details
+                    h3.title تاخیر :
+                    h3.detail #{rent.delay} روز
+                #penalty--rent.details
+                    h3.title جریمه :
+                    h3.detail #{rent.penalty} تومان
+        section.visit--menu(data-state = `${rent.state}` data-id = `${rent._id}`)
+            -if(user.role !== 'user')
+                -if(isAcceptButton)
+                    button.accept#accept--rent(data-act = 'accept') #{acceptButton}
+                -if(isRejectButton)
+                    button.reject#reject--rent(data-act='reject') #{rejectButton}
+            -if((user.role === 'user' && rent.state === 'sendRequest') || (user.role !== 'user' && !['acceptRequest', 'startRenting'].includes(rent.state)))
+                button.reject#delete--rent(data-act='delete') حذف

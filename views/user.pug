@@ -1,0 +1,87 @@
+extends base
+
+block container
+    section.visit--container
+        section#delete--container.none 
+            div 
+                h3 آیا برای حذف کاربر مطمئن هستید ؟
+                div
+                    button.accept#accept--delete بله 
+                    button.reject#reject--delete خیر 
+
+        section.visit--menu#user--menu
+            -if(userVisiting.role !== 'admin')
+                button#btn-update(data-act="edit") ویرایش
+                -if(user.role === 'admin')
+                    button#btn-delete(data-act="remove") حذف
+        section.visit--body#user_visit--container
+            section.doc-visit
+                .doc-details
+                    .doc-images
+                        img.photo-profile#user-photo(src=`/${userVisiting.photo}` alt='عکس')
+                    .details
+                        h3.title#first-name--last-name نام و نام خانوادگی :
+                        h3.detail #{userVisiting.firstName} #{userVisiting.lastName}
+                    .details
+                        h3.title نام پدر :
+                        h3.detail #{userVisiting.parentName}
+                    .details
+                        h3.title کد ملی :
+                        h3.detail #{userVisiting.username}
+                    .details
+                        h3.title تلفن شخصی :
+                        h3.detail #{userVisiting.personalPhone}
+                    .details
+                        h3.title ایمیل :
+                        h3.detail #{userVisiting.email}
+                    .details
+                        h3.title تلفن پدر :
+                        h3.detail #{userVisiting.familyPhone}
+                    .details
+                        h3.title نام مدرسه :
+                        h3.detail #{userVisiting.schoolName}
+                    .details
+                        h3.title آدرس :
+                        p.detail #{userVisiting.address.replace(/\n/g,'\n|')}
+                    div#user-visit-details
+                        #user-visit-box.details
+                            h3.title دارایی :
+                            h3.detail #{userVisiting.box} تومان
+                        #user-visit-active.details
+                            h3.title وضعیت کاربر :
+                            h3.detail کاربر #{userVisiting.role=== 'user' ? 'معمولی': `${userVisiting.role=== 'user-admin' ? 'نیمه مدیریتی':'مدیریتی'}`}
+                            h3.detail #{userVisiting.active ? 'فعال' : 'غیرفعال'}
+                    -if(userVisiting.role !== 'admin')
+                        div#user-update-details.none
+                            #user-update-box
+                                form.form#user-update-box--form
+                                    input#box(type='number' name='box' required='' placeholder='دارایی' value=`${userVisiting.box}`)
+                                    button ذخیره
+                            -if(user.role === 'admin')
+                                #user-update-active
+                                    form.form#user-update-active--form
+                                        .form-group
+                                            label(for='role') نقش
+                                            select#role(name='role' required='')
+                                                option(value='user' selected =map.get('user')) معمولی
+                                                option(value='user-admin' selected =map.get('user-admin')) نیمه مدیریتی
+                                        .form-group
+                                            label(for='active') وضعیت
+                                            select#active(name='active' required='')
+                                                option(value='true' selected =map.get('true')) فعال
+                                                option(value='false' selected =map.get('false')) غیرفعال
+                                        button ذخیره
+                -if(userVisiting.rentings.length > 0 && userVisiting.role !== 'admin')
+                    #user-visit-rentings-book
+                        each renting in userVisiting.rentings
+                            -if(renting.book)
+                                .doc-show.book-show(data-id=`${renting.book._id}`)
+                                    img(src=`/${renting.book.image[0]}` alt='عکس')
+                                    div
+                                        h3 #{renting.book.name}
+                                        .book-show-group
+                                            h4 زمان دریافت :
+                                            h4 #{renting.start}
+                                        .book-show-group
+                                            h4 زمان تحویل :
+                                            h4 #{renting.end}

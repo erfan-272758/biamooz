@@ -1,0 +1,24 @@
+#first-name--last-name {
+  margin-left: 2rem;
+}
+
+#user-visit-rentings-book::before {
+  content: 'کتاب های در دست';
+  color: #aaa;
+  position: absolute;
+  font-size: 1.35rem;
+  font-weight: 600;
+  top: 0;
+  right: 2rem;
+  white-space: nowrap;
+}
+
+#user-photo {
+  width: 15rem;
+  height: 15rem;
+  margin: 1rem;
+}
+
+#user--menu.fixed--menu button {
+  margin-top: 1rem;
+}

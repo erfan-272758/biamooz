@@ -1,0 +1,19 @@
+.rent_visit-book-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#penalty-left {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 470px) {
+  .rent_visit-book-user {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

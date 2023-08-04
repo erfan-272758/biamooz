@@ -1,0 +1,10 @@
+extends base
+block container
+    section.mini-form-section#login--section
+        form.form.validation--form#login--form
+            input#username(name="email" type='text' required='' placeholder='ایمیل یا کد ملی خود را وارد کنید')
+            input#password(name="password" type='password' required='' placeholder='رمز خود را وارد کنید' minlength='8')
+            a.forget_password--a(href='/forgotPassword') رمز عبور را فراموش کرده ام
+            button ورود
+        button.signup--button
+            a(href='/signup') ثبت نام

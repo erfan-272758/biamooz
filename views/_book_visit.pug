@@ -1,0 +1,60 @@
+mixin createBookVisit(book)
+    section#book-visit.doc-visit
+        .book_box
+            .img-details
+                .img-box
+                    img(class=`img-front ${book.image.length >= 2 ? '' :'one-book'}` src=`/${book.image[0]}` alt='عکس')
+                    -if(book.image.length == 2)
+                        img.img-back(src=`/${book.image[1]}` alt='عکس')
+            .doc-details
+                .details
+                    h3.title نام کتاب :
+                    h3.detail #{book.name}
+                .details
+                    h3.title پایه :
+                    h3.detail #{book.level}
+                .details
+                    h3.title رشته :
+                    h3.detail #{book.major}
+                .details
+                    h3.title انتشارات :
+                    h3.detail #{book.publisher}
+                .details
+                    h3.title سال انتشار :
+                    h3.detail #{book.year}
+                .details
+                    h3.title قیمت کتاب :
+                    h3.detail #{book.price} تومان
+                -if(book.summery)
+                    .details
+                        h3.title توضیحات :
+                        p.detail #{book.summery.replace(/\n/g,'\n|')}
+                .details.icon-details
+                    h3.title وضعیت :
+                    i(class = `fas ${book.reserved ? 'fa-plus rotate red': 'fa-check green'}`)
+                    h3(class = `detail ${book.reserved ? 'red': 'green'}`) #{book.reserved ? 'رزرو است':'رزرو نیست'}
+                .details.icon-details
+                    i(class = `fas ${!book.existing ? 'fa-plus rotate red': 'fa-check green'}`)
+                    h3(class = `detail ${!book.existing ? 'red': 'green'}`) #{!book.existing ? 'ناموجود':'موجود'}
+            //- end of book details
+        //- book renter
+        -if(!book.existing && ['admin','user-admin'].includes(!user || user.role) && book.renter)
+            #book-renter.doc-show.user-show(data-id=`${book.renter._id}`)
+                img.photo-profile(src=`/${book.renter.photo}` alt='عکس')
+                div
+                    h3 #{book.renter.firstName} #{book.renter.lastName}
+                    h4 #{book.renter.personalPhone}
+        //- end of book renter
+        //- book editors
+        -if(user && user.role === 'admin')
+            #book-editors
+                div 
+                    each editor in book.editors
+                        -if(editor.user)
+                            .doc-show.user-show(data-id=`${editor.user._id}`)
+                                img.photo-profile(src=`/${editor.user.photo}` alt='عکس')
+                                div
+                                    h3 #{editor.user.firstName} #{editor.user.lastName}
+                                    h4 #{editor.user.personalPhone}
+                                    p  #{editor.activity}
+                                    h4 #{editor.createdAt}

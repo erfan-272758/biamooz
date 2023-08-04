@@ -1,0 +1,532 @@
+<!-- <section class="filter">
+  <form class="form" id="filter-property--form">
+    <div class="filter-groups filter-property">
+      <div class="filter-title"></div>
+      <div class="filter-detail">
+        <div class="filter-group"></div>
+      </div>
+    </div>
+    <div class="filter-groups filter-sort">
+      <div class="filter-title"></div>
+      <div class="filter-detail"></div>
+    </div>
+  </form>
+</section> -->
+
+<!-- 3 -->
+<section class="filter--container">
+  <section class="filter">
+    <form class="form" id="filter-property--form">
+      <div class="filter-body">
+        <div class="filter-groups filter-property">
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="text" name="username" placeholder="کد ملی کاربر" />
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="email" name="email" placeholder="ایمیل کاربر" />
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="text" name="book_id" placeholder="QR کد کتاب" />
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <label for="state">وضعیت کرایه</label>
+            </div>
+            <div class="filter-detail">
+              <div class="filter-mini-group">
+                <input type="checkbox" name="state" value="sendRequest" />
+                <label for="state">درخواست شده</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="state" value="acceptRequest" />
+                <label for="state">درخواست قبول شده</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="state" value="rejectRequest" />
+                <label for="state">درخواست رد شده</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="state" value="failRenting" />
+                <label for="state">کرایه با خطا مواجه شده</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="state" value="startRenting" />
+                <label for="state">کرایه داده شده</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="state" value="endRenting" />
+                <label for="state">کرایه پایان یافته</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-groups filter-sort">
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="request" />
+              <label for="sort">زمان درخواست</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="request_1">صعودی</option>
+                <option value="request_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="start" />
+              <label for="sort">زمان شروع کرایه</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="start_1">صعودی</option>
+                <option value="start_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="end" />
+              <label for="sort">زمان پایان کرایه</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="end_1">صعودی</option>
+                <option value="end_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="price" />
+              <label for="sort">هزینه</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="price_1">صعودی</option>
+                <option value="price_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="delay" />
+              <label for="sort">تاخیر</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="delay_1">صعودی</option>
+                <option value="delay_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="penalty" />
+              <label for="sort">جریمه</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="penalty_1">صعودی</option>
+                <option value="penalty_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button>اعمال</button>
+    </form>
+    <button class="cancel--filter">انصراف</button>
+  </section>
+</section>
+
+<!-- 2 -->
+
+<section class="filter--container">
+  <section class="filter">
+    <form class="form" id="filter-property--form">
+      <div class="filter-body">
+        <div class="filter-groups filter-property">
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="text" name="lastName" placeholder="نام خانوادگی" />
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="text" name="username" placeholder="کد ملی" />
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="text" name="personalPhone" placeholder="تلفن شخصی" />
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="email" name="email" placeholder="ایمیل" />
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="text" name="familyPhone" placeholder="تلفن پدر" />
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="text" name="schoolName" placeholder="نام مدرسه" />
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <textarea
+                name="address"
+                cols="30"
+                rows="10"
+                placeholder="آدرس"
+              ></textarea>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="number" name="box" placeholder="ذخیره صندوق" />
+            </div>
+            <div class="filter-detail">
+              <div class="filter-mini-group">
+                <input type="radio" name="box-eq" value="gt" />
+                <label for="box-eq">بیشتر</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="radio" name="box-eq" value="eq" checked />
+                <label for="box-eq">مساوی</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="radio" name="box-eq" value="lt" />
+                <label for="box-eq">کمتر</label>
+              </div>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <label for="role">موقعیت کاربر</label>
+            </div>
+            <div class="filter-detail">
+              <div class="filter-mini-group">
+                <input type="checkbox" name="role" value="user" />
+                <label for="role">معمولی</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="role" value="user-admin" />
+                <label for="role">نیمه مدیریتی</label>
+              </div>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <label for="active">وضعیت کاربر</label>
+            </div>
+            <div class="filter-detail">
+              <div class="filter-mini-group">
+                <input type="checkbox" name="active" value="true" />
+                <label for="active">فعال</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="active" value="false" />
+                <label for="active">غیرفعال</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-groups filter-sort">
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="firstName" />
+              <label for="sort">نام</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="firstName_1">صعودی</option>
+                <option value="firstName_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="lastName" />
+              <label for="sort">نام خانوادگی</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="lastName_1">صعودی</option>
+                <option value="lastName_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="box" />
+              <label for="sort">ذخیره صندوق</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="box_1">صعودی</option>
+                <option value="box_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="role" />
+              <label for="sort">موقعیت کاربر</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="role_1">صعودی</option>
+                <option value="role_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="active" />
+              <label for="sort">وضعیت کاربر</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="active_1">صعودی</option>
+                <option value="active_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button>اعمال</button>
+    </form>
+    <button class="cancel--filter">انصراف</button>
+  </section>
+</section>
+
+<!-- 1 -->
+<section class="filter--container">
+  <section class="filter">
+    <form class="form" id="filter--form">
+      <div class="filter-body">
+        <div class="filter-groups filter-property">
+          <section class="filter-group">
+            <div class="filter-title">
+              <label for="">رشته</label>
+            </div>
+            <div class="filter-detail">
+              <div class="filter-mini-group">
+                <input type="checkbox" name="major" value="ریاضی" />
+                <label for="major">ریاضی</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="major" value="تجربی" />
+                <label for="major">تجربی</label>
+              </div>
+              <div class="filter-mini-group">
+                <input  type="checkbox" name="major" value="انسانی" />
+                <label for="major">انسانی</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="major" value="عمومی" />
+                <label for="major">عمومی</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="major" value="ریاضی-تجربی" />
+                <label for="major">ریاضی-تجربی</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="major" value="کتابچه عمومی" />
+                <label for="major">کتابچه عمومی</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="major" value="کتابچه تخصصی" />
+                <label for="major">کتابچه تخصصی</label>
+              </div>
+            </div>
+          </section>
+          <section class="filter-group">
+            <div class="filter-title"><label for="">انتشارات</label></div>
+            <div class="filter-detail">
+              <div class="filter-mini-group">
+                <input type="checkbox" name="publisher" value="خیلی سبز" />
+                <label for="publisher">خیلی سبز</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="publisher" value="گاج" />
+                <label for="publisher">گاج</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="publisher" value="مهر و ماه" />
+                <label for="publisher">مهر و ماه</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="publisher" value="مبتکران" />
+                <label for="publisher">مبتکران</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="publisher" value="نشر الگو" />
+                <label for="publisher">نشر الگو</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="publisher" value="نشر دریافت" />
+                <label for="publisher">نشر دریافت</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="publisher" value="کانون قلمچی" />
+                <label for="publisher">کانون قلمچی</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="publisher" value="دیگر" />
+                <label for="publisher">دیگر</label>
+              </div>
+            </div>
+          </section>
+          <section class="filter-group">
+            <div class="filter-title">
+              <label for="">سال انتشار</label>
+            </div>
+            <div class="filter-detail">
+              <div class="filter-mini-group">
+                <input type="checkbox" name="year" value="1401" />
+                <label for="year">1401</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="year" value="1400" />
+                <label for="year">1400</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="year" value="1399" />
+                <label for="year">1399</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="year" value="1398" />
+                <label for="year">1398</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="checkbox" name="year" value="1397" />
+                <label for="year">1397</label>
+              </div>
+            </div>
+          </section>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="number" name="price" placeholder="قیمت" />
+            </div>
+            <div class="filter-detail">
+              <div class="filter-mini-group">
+                <input type="radio" name="price-eq" value="gt" />
+                <label for="price-eq">بیشتر</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="radio" name="price-eq" value="eq" checked />
+                <label for="price-eq">مساوی</label>
+              </div>
+              <div class="filter-mini-group">
+                <input type="radio" name="price-eq" value="lt" />
+                <label for="price-eq">کمتر</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-groups filter-sort">
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="name" />
+              <label for="sort">نام</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="name_1">صعودی</option>
+                <option value="name_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="major" />
+              <label for="sort">رشته</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="major_1">صعودی</option>
+                <option value="major_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="publisher" />
+              <label for="sort">انتشارات</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="publisher_1">صعودی</option>
+                <option value="publisher_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="year" />
+              <label for="sort">سال انتشار</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="year_1">صعودی</option>
+                <option value="year_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="price" />
+              <label for="sort">قیمت</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="price_1">صعودی</option>
+                <option value="price_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="reserved" />
+              <label for="sort">رزو بودن</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="reserved_1">صعودی</option>
+                <option value="reserved_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">
+              <input type="checkbox" name="sort" value="existing" />
+              <label for="sort">موجود بودن</label>
+            </div>
+            <div class="filter-detail">
+              <select name="sort">
+                <option value="existing_1">صعودی</option>
+                <option value="existing_-1">نزولی</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button>اعمال</button>
+    </form>
+    <button class="cancel--filter">انصراف</button>
+  </section>
+</section>

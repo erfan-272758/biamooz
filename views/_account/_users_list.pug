@@ -1,0 +1,31 @@
+mixin usersList()   
+    // users list admin
+    section#b-users-list-a.none
+        .container--query#container--query-list-users.contain-loading
+            form.form--query--search#users-list-a--form
+                input.query--search(name="search" type='search' placeholder='نام کاربر را وارد کنید')
+                button.query--button بیاب
+                .temp-circles
+            button.query--filter#users-list-a_filter فیلتر کن
+        .body-response 
+            .full-body 
+                table.table.users-list-a--table
+                    thead
+                        tr
+                            th عکس
+                            th نام و نام خانوادگی
+                            th نام پدر
+                            th شماره تماس
+                            th کد ملی
+                            th رتبه
+                            th وضعیت
+                    tbody
+                include ../_pages
+            .empty-body
+    //- end of users list admin
+        .pages
+            a(href='#' style="visibility:hidden")
+                i.fas.fa-chevron-right
+            h6(data-current = '1') #{new Intl.NumberFormat('fa-IR').format(1)}
+            a(href='#' style="visibility:hidden")
+                i.fas.fa-chevron-left

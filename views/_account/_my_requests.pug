@@ -1,0 +1,31 @@
+mixin myRequests()
+    //- requests list user
+    section#b-requests-list-u.none
+        .container--query#container--query--mine-requests.contain-loading
+            form.form--query--search#requests-list-u--form
+                input.query--search(name="search" type='search' placeholder='نام کتاب را وارد کنید')
+                button.query--button بیاب
+                .temp-circles
+            button.query--filter#requests-list-u_filter فیلتر کن
+        .body-response
+            .full-body 
+                table.table.requests-list-u--table
+                    thead
+                        tr
+                            th عکس کتاب
+                            th نام کتاب
+                            th هزینه اشتراک
+                            th زمان درخواست
+                            th زمان دریافت
+                            th زمان تحویل
+                            th وضعیت
+                    tbody
+                include ../_pages
+            .empty-body
+//- end of requests list user
+        .pages
+            a(href='#' style="visibility:hidden")
+                i.fas.fa-chevron-right
+            h6(data-current = '1') #{new Intl.NumberFormat('fa-IR').format(1)}
+            a(href='#' style="visibility:hidden")
+                i.fas.fa-chevron-left

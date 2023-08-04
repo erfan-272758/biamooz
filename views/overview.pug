@@ -1,0 +1,34 @@
+extends base
+include _one_book
+block header
+    include _overview_navbar
+block container
+    section.filter--container.none#allbook_filter--container
+        include _filter_allbooks
+    .allbook_container
+        section.container--query.allbook_query
+            //- form.form--query--search#allbook--form(data-query = JSON.stringify(query))
+            form.form--query--search#allbook--form
+                input.query--search(name="search" type='search' placeholder='نام کتاب را وارد کنید')
+                button.query--button بیاب
+                .temp-circles            
+            button.query--filter#allbook_filter فیلتر کن
+
+        section.allbook_content
+            #allbook_books
+                each book in books
+                    +createOneBookOverview(book)
+            include _pages
+            //- .pages
+            //-     .page-box
+            //-         a#first-page(href='/1' class= page > 2 ? '':'none' )
+            //-             i.fas.fa-chevron-right.no-margin
+            //-             i.fas.fa-chevron-right.no-margin
+            //-         a#prvious-page(href=`/${page-1}` class= page > 1 ? '':'none' )
+            //-             i.fas.fa-chevron-right
+            //-         h6(data-num-of-pages=numOfPages data-current = page) #{new Intl.NumberFormat('fa-IR').format(page)}
+            //-         a#next-page(href=`/${+page + 1}` class= numOfPages > page ? '':'none')
+            //-             i.fas.fa-chevron-left
+            //-         a#last-page(href=`/${numOfPages}` class= numOfPages > +page + 1 ? '':'none')
+            //-             i.fas.fa-chevron-left.no-margin
+            //-             i.fas.fa-chevron-left.no-margin

@@ -1,0 +1,66 @@
+extends base
+
+include _account/_users_list 
+include _account/_renting_book 
+include _account/_personal_info 
+include _account/_others_requests 
+include _account/_my_requests 
+include _account/_insert_book  
+include _account/_aggregates 
+include _filter_allrents
+
+block container
+    section.profile(data-user-role=`"${user.role}"`)
+        -if(user.role === 'admin')
+            section.filter--container#allusers-filter--contrainer.none
+                include _filter_allusers
+        section.filter--container#alluser-rents-filter--contrainer.none
+            +filterRents(false)
+        -if(user.role !== 'user')
+            section.filter--container#allrents-filter--contrainer.none
+                +filterRents(true)
+        //- profile menu
+        section.profile--menu
+            .menu-btn
+                .line.line1
+                .line.line2
+                .line.line3
+            .menu-list
+                ul
+                    li
+                        a#m-personal-info(href='#b-personal-info') اطلاعات شخصی
+                    li
+                        a#m-renting-book(href='#b-renting-book') کتاب های در دست
+                    li
+                        a#m-requests-list-u(href='#b-requests-list-u') لیست درخواست های من
+                    li
+                        a#m-notification(href='#b-notification') اعلانات
+                    -if(['admin','user-admin'].includes(user.role))
+                        li
+                            a#m-insert-book-u-a_a(href='#b-insert-book-u-a_a') اضافه کردن کتاب
+                        li
+                            a#m-requests-list-u-a_a(href='#b-requests-list-u-a_a') لیست درخواست های کاربران
+                    li
+                        a#m-message(href='#b-message') #{user.role === 'user' ? 'ارتباط با ما' :'پیام های کاربران'}
+
+                    -if(user.role === 'admin')
+                        li
+                            a#m-users-list-a(href='#b-users-list-a') لیست کاربر ها
+                        li
+                            a#m-aggregate-a(href='#b-aggregate-a') آمار ها
+            //- end of profile menu
+
+        //- profile body
+        section.profile--body
+            +personalInfo()
+            +rentingBooks()
+            +myRequests()
+            section#b-notification.none(data-mode=user.role)
+            section#b-message.none(data-mode=user.role)
+
+            -if(['admin','user-admin'].includes(user.role))
+                +insertBook()
+                +othersRequests()
+            -if('admin' === user.role)
+                +usersList()
+                +aggregates()
